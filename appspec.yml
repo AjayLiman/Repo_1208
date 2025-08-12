@@ -3,8 +3,13 @@ os: linux
 files:
   - source: /index.html
     destination: /var/www/html/
+  - source: /about.html
+    destination: /var/www/html/
+  - source: /home.html
+    destination: /var/www/html/
+
 hooks:
   Beforeinstall:
-    - location: Scripts/dep.sh
+    - location: dep.sh
       timeout: 300
       runas: root
